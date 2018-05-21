@@ -15,8 +15,10 @@ var cheerio = require("cheerio");
 var db = require("./models");
 
 var PORT = 3000;
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-
+//deployment
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scraperDB";
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 // Initialize Express
 var app = express();
@@ -40,7 +42,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/scraperDB");
+//mongoose.connect("mongodb://localhost/scraperDB");
 
 // Routes
 // A GET route for scraping the thehockeynews website
