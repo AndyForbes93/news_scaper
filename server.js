@@ -18,7 +18,7 @@ var db = require("./models");
 
 var PORT = 3000;
 //deployment
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://AndyForbes:Carwise123!@ds215709.mlab.com:15709/heroku_4qzj0x6j";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_dhbzsz9h:Carwise123!@ds035786.mlab.com:35786/heroku_dhbzsz9h";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
