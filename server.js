@@ -5,6 +5,7 @@ var mongoose = require("mongoose");
 const methodOverride = require("method-override");
 
 
+
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
@@ -14,9 +15,10 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
+
 var PORT = 3000;
 //deployment
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scraperDB";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://AndyForbes:Carwise123!@ds231070.mlab.com:31070/hockey_news_scraper";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
