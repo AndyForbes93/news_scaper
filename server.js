@@ -3,6 +3,9 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 const methodOverride = require("method-override");
+var mongodb = require("mongodb");
+//var dataURL = process.env.MONGOLAB_URI;
+
 
 
 
@@ -15,12 +18,16 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-
+//deployement not working
 var PORT = 3000;
 //deployment
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://AndyForbes:Carwise123!@ds215709.mlab.com:15709/heroku_4qzj0x6j";
+var dataURL = process.env.MONGODB_URI || "mongodb://heroku_9kdn38d4:gru9gs4k2cccp2jntnofn2u5og@ds231070.mlab.com:31070/heroku_9kdn38d4";
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.connect(dataURL).then(()=>{
+  console.log("connected");
+}).catch(err => {
+  console.log(err);
+});
 
 // Initialize Express
 var app = express();
