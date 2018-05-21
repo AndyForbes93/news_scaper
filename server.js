@@ -3,9 +3,13 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 const methodOverride = require("method-override");
+<<<<<<< HEAD
 var mongodb = require("mongodb");
 //var dataURL = process.env.MONGOLAB_URI;
 
+=======
+//var dataURL = process.env.MONGOLAB_URI;
+>>>>>>> 14e5f649be0ffe48d78ee94261948c95f057736a
 
 
 
