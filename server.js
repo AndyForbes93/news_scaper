@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 const methodOverride = require("method-override");
-var dataURL = process.env.MONGOLAB_URI;
+//var dataURL = process.env.MONGOLAB_URI;
 
 
 
@@ -19,7 +19,7 @@ var db = require("./models");
 
 var PORT = 3000;
 //deployment
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_dhbzsz9h:Carwise123!@ds035786.mlab.com:35786/heroku_dhbzsz9h";
+var dataURL = process.env.MONGODB_URI || "mongodb://heroku_9kdn38d4:gru9gs4k2cccp2jntnofn2u5og@ds231070.mlab.com:31070/heroku_9kdn38d4";
 mongoose.Promise = Promise;
 mongoose.connect(dataURL).then(()=>{
   console.log("connected");
