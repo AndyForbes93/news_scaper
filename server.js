@@ -21,7 +21,11 @@ var PORT = 3000;
 //deployment
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_dhbzsz9h:Carwise123!@ds035786.mlab.com:35786/heroku_dhbzsz9h";
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.connect(dataURL).then(()=>{
+  console.log("connected");
+}).catch(err => {
+  console.log(err);
+});
 
 // Initialize Express
 var app = express();
