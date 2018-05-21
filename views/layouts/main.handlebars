@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Hockey News Scraper</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	</head>
+	<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-5">
+             <ul class="navbar-nav ml-auto text-center">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/scrape">Scrape New Articles! <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/rating">Rated Articles! <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">
+                    Hockey News Scraper!
+                </h1>
+            </div>
+		{{{ body }}}
+        </div>
+
+		{{!-- Add in jQuery --}}
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="/js/frontEnd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	</body>
+</HTML>

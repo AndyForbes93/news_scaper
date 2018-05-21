@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+{{#each article}}
+            <div class="card mb-5" id="{{this.id}}">
+                 <div class="pb-2">
+                    <h4 class="card-title diplsay-4 mt-1 ml-1"><u>{{this.title}}: </u></h4>
+                    <p class="lead"><strong>{{this.name}} says:</strong></p>
+                    <p class="lead ml-5">{{this.body}}<br>{{this.rating}} / 5</p>
+                    <form action="/rating/{{this.id}}?_method=delete" method="post">
+                    <input type="hidden" name="_method" value="delete">
+                    <button type="submit" class="btn btn-danger" id="{{this.id}}">Delete</button>
+                    </form>
+                </div>
+                 <img class="card-img-bottom" src="{{this.image}}" alt="Card image cap" width="300px">
+            </div>
+{{/each}}
+        </div>
+    </div>
+</div>
+</div>
