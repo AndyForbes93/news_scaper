@@ -3,15 +3,9 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 const methodOverride = require("method-override");
-<<<<<<< HEAD
+
 var mongodb = require("mongodb");
-//var dataURL = process.env.MONGOLAB_URI;
-
-=======
-//var dataURL = process.env.MONGOLAB_URI;
->>>>>>> 14e5f649be0ffe48d78ee94261948c95f057736a
-
-
+//var dataURL = process.env.MONG
 
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
@@ -23,9 +17,9 @@ var cheerio = require("cheerio");
 var db = require("./models");
 
 //deployement not working
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 //deployment
-var dataURL = process.env.MONGODB_URI || "mongodb://heroku_9kdn38d4:gru9gs4k2cccp2jntnofn2u5og@ds231070.mlab.com:31070/heroku_9kdn38d4";
+var dataURL = process.env.MONGODB_URI || "mongodb://localhost/scraperDB";
 mongoose.Promise = Promise;
 mongoose.connect(dataURL).then(()=>{
   console.log("connected");
