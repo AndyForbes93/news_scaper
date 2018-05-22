@@ -105,7 +105,7 @@ app.get("/", function (req, res) {
 });
 //displays articles with a rating
 app.get("/rating", function (req, res) {
-  db.Article.find({}).populate("rate")
+  db.Article.find({rated: true})
     .then(function (dbArticle) {
       let foundArticle = [];
       dbArticle.forEach(article => {
