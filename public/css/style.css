@@ -1,0 +1,12 @@
+.jumbotron{
+    color: black;
+    background-image: url("http://www.teamdc.org/wp-content/uploads/2017/05/iceHockey.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    background-position: 25% 40%;
+
+}
+h1{
+    text-shadow: 3px 3px lightgray;
+}

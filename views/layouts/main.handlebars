@@ -4,19 +4,26 @@
 		<title>Hockey News Scraper</title>
 		<meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-5">
-             <ul class="navbar-nav ml-auto text-center">
+        <div class="bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top px-5">
+             <ul class="navbar-nav mr-auto text-center">
                   <li class="nav-item active">
-                    <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/"> <i class="fas fa-home"></i>  Home<span class="sr-only">(current)</span></a>
+                </li>
+              
+            </ul>
+            <ul class="navbar-nav ml-auto text-center">
+                  <li class="nav-item active mr-2">
+                    <a class="nav-link" href="/scrape"><i class="fas fa-pencil-alt"></i>  Scrape New Articles! <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/scrape">Scrape New Articles! <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/rating"><i class="far fa-star"></i>  Rated Articles! <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/rating">Rated Articles! <span class="sr-only">(current)</span></a>
-                </li>
+
             </ul>
         </nav>
 
@@ -27,6 +34,7 @@
                 </h1>
             </div>
 		{{{ body }}}
+        </div>
         </div>
 
 		{{!-- Add in jQuery --}}
